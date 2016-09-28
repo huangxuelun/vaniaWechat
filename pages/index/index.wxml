@@ -1,0 +1,43 @@
+<!--index.wxml-->
+<scroll-view class="container">
+  <view  bindtap="changeFavour" class="userinfo">
+    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+  </view>
+  <view wx:if="{{records}}" class="rows">  
+    <div class="input-group mb10">请选择关注联赛:</div>
+    <radio-group bindchange="radioChange">
+        <label  wx:for-items="{{items}}">
+            <div class="input-group">
+                <span class="input-group-addon">
+                    <radio value="{{item.value}}" data-index="1" name="sports" checked="{{item.checked}}"/>
+                </span>
+                <span class="form-control">{{item.value}}</span>
+            </div>
+        </label>
+    </radio-group>
+    <button bindtap="getMessage" type="primary" class="mt10"> 确定 </button>
+  </view>
+  <view wx:else>
+    <div class="input-group mb10">关注联赛:{{league}}(点击头像切换)</div>
+    <ul class="list-group">
+        <li class="list-group-item">
+            <span class="wp15">排名</span>
+            <span class="wp25">球队</span>
+            <span>场次</span>
+            <span>战绩</span>
+            <span>积分</span>
+            <!--<span>净胜球</span> -->
+        </li>
+        <li class="list-group-item"  wx:for="{{ranks}}" wx:for-item="rank">
+            <span class="wp15">{{rank.c1}}</span>
+            <span class="wp25"><navigator url="{{rank.c2L}}">{{rank.c2}}</navigator></span>
+            <span>{{rank.c3}}</span>
+            <span>{{rank.c41}}/{{rank.c42}}/{{rank.c43}}</span>
+            <span>{{rank.c6}}</span>
+            <!--<span>{{rank.c5}}</span>-->
+        </li> 
+    </ul>  
+  </view>
+</scroll-view>
+

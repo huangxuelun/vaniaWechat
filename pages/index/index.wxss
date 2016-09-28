@@ -1,0 +1,36 @@
+/**index.wxss**/
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  margin-top: 200px;
+}
+
+.list-group li  span{
+  width: 20%;
+  font-size: 12px;
+  display: inline-block;
+}
+
+.list-group li  span.wp15 {
+  width: 15%;
+}
+
+.list-group li  span.wp25 {
+  width: 25%;
+}
+

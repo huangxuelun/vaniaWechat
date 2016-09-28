@@ -1,0 +1,46 @@
+{ 
+  "pages":[
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/search/search",
+    "pages/video/video"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#ecf0f1",
+    "navigationBarTitleText": "足球赛事查询",
+    "navigationBarTextStyle":"black"
+  },
+ "tabBar": {
+      "color": "#00bb9c",
+      "selectedColor": "#56abe4",
+      "borderStyle": "#33475f",
+      "backgroundColor": "#ecf0f1",
+    "list": [{
+      "pagePath": "pages/index/index",
+      "iconPath": "images/home.png",
+      "selectedIconPath": "images/home-HL.png",
+      "text": "积分榜"
+    },  {
+      "pagePath": "pages/home/home",
+      "iconPath": "images/setting.png",
+      "selectedIconPath": "images/setting-HL.png",
+      "text": "射手榜"
+    }, {
+      "pagePath": "pages/home/home",
+      "iconPath": "images/raiders.png",
+      "selectedIconPath": "images/raiders-HL.png",
+      "text": "赛程"
+    }, {
+      "pagePath": "pages/search/search",
+      "iconPath": "images/searchList.png",
+      "selectedIconPath": "images/searchList-HL.png",
+      "text": "检索"
+    },{
+      "pagePath": "pages/video/video",
+      "iconPath": "images/person.png",
+      "selectedIconPath": "images/person-HL.png",
+      "text": "视频"
+    }]
+ }  
+}
